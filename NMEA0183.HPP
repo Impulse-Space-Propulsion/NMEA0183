@@ -56,90 +56,11 @@ SOFTWARE.
 ** Response Classes
 */
 
-#include "AAM.hpp"
-#include "ALM.hpp"
-#include "APB.hpp"
-#include "ASD.hpp"
-#include "BEC.hpp"
-#include "BOD.hpp"
-#include "BWC.hpp"
-#include "BWR.hpp"
-#include "BWW.hpp"
-#include "DBT.hpp"
-#include "DCN.hpp"
-#include "DPT.hpp"
-#include "FSI.hpp"
-#include "GDA.hpp" // Sentence Not Recommended For New Designs
-#include "GDF.hpp" // Sentence Not Recommended For New Designs
-#include "GDP.hpp" // Sentence Not Recommended For New Designs
 #include "GGA.hpp"
-#include "GLA.hpp" // Sentence Not Recommended For New Designs
-#include "GLC.hpp"
-#include "GLF.hpp" // Sentence Not Recommended For New Designs
 #include "GLL.hpp"
-#include "GLP.hpp" // Sentence Not Recommended For New Designs
-#include "GOA.hpp" // Sentence Not Recommended For New Designs
-#include "GOF.hpp" // Sentence Not Recommended For New Designs
-#include "GOP.hpp" // Sentence Not Recommended For New Designs
-#include "GSA.hpp"
-#include "GSV.hpp"
-#include "GTD.hpp" // Sentence Not Recommended For New Designs
-#include "GXA.hpp"
-#include "GXF.hpp" // Sentence Not Recommended For New Designs
-#include "GXP.hpp" // Sentence Not Recommended For New Designs
-#include "HCC.hpp" // Sentence Not Recommended For New Designs
-#include "HDG.hpp"
-#include "HDM.hpp" // Sentence Not Recommended For New Designs
-#include "HDT.hpp"
-#include "HSC.hpp"
-#include "IMA.hpp" // Sentence Not Recommended For New Designs
-#include "LCD.hpp"
-#include "MHU.hpp" // Sentence Not Recommended For New Designs
-#include "MTA.hpp" // Sentence Not Recommended For New Designs
-#include "MTW.hpp"
-#include "MWV.hpp"
-#include "OLN.hpp"
-#include "OSD.hpp"
-#include "P.hpp"
-#include "RMA.hpp"
-#include "RMB.hpp"
 #include "RMC.hpp"
-#include "ROT.hpp"
-#include "RPM.hpp"
-#include "RSA.hpp"
-#include "RSD.hpp"
-#include "RTE.hpp"
-#include "SFI.hpp"
-#include "STN.hpp"
-#include "TEP.hpp" // Sentence Not Recommended For New Designs
-#include "TRF.hpp"
-#include "TTM.hpp"
-#include "VBW.hpp"
-#include "VDR.hpp"
-#include "VHW.hpp"
-#include "VLW.hpp"
-#include "VPW.hpp"
 #include "VTG.hpp"
-#include "VWE.hpp" // Sentence Not Recommended For New Designs
-#include "WCV.hpp"
-#include "WDC.hpp" // Sentence Not Recommended For New Designs
-#include "WDR.hpp" // Sentence Not Recommended For New Designs
-#include "WNC.hpp"
-#include "WPL.hpp"
-#include "XDR.hpp"
-#include "XTE.hpp"
-#include "XTR.hpp"
-#include "ZDA.hpp"
-#include "ZFI.hpp" // Sentence Not Recommended For New Designs
-#include "ZFO.hpp" 
-#include "ZLZ.hpp" // Sentence Not Recommended For New Designs
-#include "ZPI.hpp" // Sentence Not Recommended For New Designs
-#include "ZTA.hpp" // Sentence Not Recommended For New Designs
-#include "ZTE.hpp" // Sentence Not Recommended For New Designs
-#include "ZTG.hpp"
-#include "ZTI.hpp" // Sentence Not Recommended For New Designs
-#include "ZWP.hpp" // Sentence Not Recommended For New Designs
-#include "ZZU.hpp" // Sentence Not Recommended For New Designs
+#include "P.hpp"
 
 class NMEA0183
 {
@@ -172,90 +93,11 @@ class NMEA0183
       ** NMEA 0183 Sentences we understand
       */
 
-      AAM Aam;
-      ALM Alm;
-      APB Apb;
-      ASD Asd;
-      BEC Bec;
-      BOD Bod;
-      BWC Bwc;
-      BWR Bwr;
-      BWW Bww;
-      DBT Dbt;
-      DCN Dcn;
-      DPT Dpt;
-      FSI Fsi;
-      GDA Gda; // Sentence Not Recommended For New Designs
-      GDF Gdf; // Sentence Not Recommended For New Designs
-      GDP Gdp; // Sentence Not Recommended For New Designs
       GGA Gga;
-      GLA Gla; // Sentence Not Recommended For New Designs
-      GLC Glc;
-      GLF Glf; // Sentence Not Recommended For New Designs
       GLL Gll;
-      GLP Glp; // Sentence Not Recommended For New Designs
-      GOA Goa; // Sentence Not Recommended For New Designs
-      GOF Gof; // Sentence Not Recommended For New Designs
-      GOP Gop; // Sentence Not Recommended For New Designs
-      GSA Gsa;
-      GSV Gsv;
-      GTD Gtd; // Sentence Not Recommended For New Designs
-      GXA Gxa;
-      GXF Gxf; // Sentence Not Recommended For New Designs
-      GXP Gxp; // Sentence Not Recommended For New Designs
-      HCC Hcc; // Sentence Not Recommended For New Designs
-      HDG Hdg;
-      HDM Hdm; // Sentence Not Recommended For New Designs
-      HDT Hdt;
-      HSC Hsc;
-      IMA Ima; // Sentence Not Recommended For New Designs
-      LCD Lcd;
-      MHU Mhu; // Sentence Not Recommended For New Designs
-      MTA Mta; // Sentence Not Recommended For New Designs
-      MTW Mtw;
-      MWV Mwv;
-      OLN Oln;
-      OSD Osd;
-      P   Proprietary;
-      RMA Rma;
-      RMB Rmb;
       RMC Rmc;
-      ROT Rot;
-      RPM Rpm;
-      RSA Rsa;
-      RSD Rsd;
-      RTE Rte;
-      SFI Sfi;
-      STN Stn;
-      TEP Tep; // Sentence Not Recommended For New Designs
-      TRF Trf;
-      TTM Ttm;
-      VBW Vbw;
-      VDR Vdr;
-      VHW Vhw;
-      VLW Vlw;
-      VPW Vpw;
       VTG Vtg;
-      VWE Vwe; // Sentence Not Recommended For New Designs
-      WCV Wcv;
-      WDC Wdc; // Sentence Not Recommended For New Designs
-      WDR Wdr; // Sentence Not Recommended For New Designs
-      WNC Wnc;
-      WPL Wpl;
-	  XDR Xdr;
-	  XTE Xte;
-      XTR Xtr;
-      ZDA Zda;
-      ZFI Zfi; // Sentence Not Recommended For New Designs
-      ZFO Zfo;
-      ZLZ Zlz; // Sentence Not Recommended For New Designs
-      ZPI Zpi; // Sentence Not Recommended For New Designs
-      ZTA Zta; // Sentence Not Recommended For New Designs
-      ZTE Zte; // Sentence Not Recommended For New Designs
-      ZTI Zti; // Sentence Not Recommended For New Designs
-      ZTG Ztg;
-      ZWP Zwp; // Sentence Not Recommended For New Designs
-      ZZU Zzu; // Sentence Not Recommended For New Designs
+      P   Proprietary;
 
       std::string ErrorMessage; // Filled when Parse returns FALSE
       std::string LastSentenceIDParsed; // ID of the lst sentence successfully parsed
