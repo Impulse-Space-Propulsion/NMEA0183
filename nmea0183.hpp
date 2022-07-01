@@ -50,7 +50,6 @@ SOFTWARE.
 #include "radardat.hpp"
 #include "satdat.hpp"
 #include "freqmode.hpp"
-#include "wayptloc.hpp" // Sentence Not Recommended For New Designs
 
 /*
 ** Response Classes
