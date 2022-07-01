@@ -38,29 +38,29 @@ SOFTWARE.
 ** General Purpose Classes
 */
 
-#include "Sentence.hpp"
-#include "Response.hpp"
-#include "LatLong.hpp"
-#include "LoranTD.hpp"
-#include "Manufact.hpp"
-#include "MList.hpp"
-#include "OmegaPar.hpp"
-#include "DeccaLOP.hpp"
-#include "RatioPls.hpp"
-#include "RadarDat.hpp"
-#include "SatDat.hpp"
-#include "FreqMode.hpp"
-#include "WayptLoc.hpp" // Sentence Not Recommended For New Designs
+#include "sentence.hpp"
+#include "response.hpp"
+#include "latlong.hpp"
+#include "lorantd.hpp"
+#include "manufact.hpp"
+#include "mlist.hpp"
+#include "omegapar.hpp"
+#include "deccalop.hpp"
+#include "ratiopls.hpp"
+#include "radardat.hpp"
+#include "satdat.hpp"
+#include "freqmode.hpp"
+#include "wayptloc.hpp" // Sentence Not Recommended For New Designs
 
 /*
 ** Response Classes
 */
 
-#include "GGA.hpp"
-#include "GLL.hpp"
-#include "RMC.hpp"
-#include "VTG.hpp"
-#include "P.hpp"
+#include "gga.hpp"
+#include "gll.hpp"
+#include "rmc.hpp"
+#include "vtg.hpp"
+#include "p.hpp"
 
 class NMEA0183
 {
