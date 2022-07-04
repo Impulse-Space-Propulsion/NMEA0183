@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 void MANUFACTURER_LIST::Empty( void ) noexcept
 {

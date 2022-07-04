@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 void LONGITUDE::Empty( void ) noexcept
 {
@@ -60,7 +59,7 @@ void LONGITUDE::Write( SENTENCE& sentence ) const noexcept
 {
    char temp_string[ 80 ];
 
-   std::size_t number_of_characters = ::sprintf( temp_string, "%08.2f", Longitude );
+   std::size_t number_of_characters = ::sprintf( temp_string, "%08.3f", Longitude );
    sentence += std::string_view(temp_string, number_of_characters );
    
    if ( Easting == EASTWEST::East )

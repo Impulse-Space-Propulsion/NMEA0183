@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 NMEA0183_BOOLEAN SENTENCE::Boolean( int field_number ) const noexcept
 {
@@ -707,12 +706,12 @@ SENTENCE const& SENTENCE::operator += ( NMEA0183_BOOLEAN const boolean ) noexcep
    return( *this );
 }
 
-SENTENCE const& SENTENCE::operator += ( LATLONG const& source ) noexcept
-{
-   source.Write( *this );
+// SENTENCE const& SENTENCE::operator += ( LATLONG const& source ) noexcept
+// {
+//    source.Write( *this );
 
-   return( *this );
-}
+//    return( *this );
+// }
 
 SENTENCE const& SENTENCE::operator += ( time_t const time_value ) noexcept
 {
@@ -776,6 +775,50 @@ SENTENCE const& SENTENCE::operator += (REFERENCE const a_reference) noexcept
         break;
 
     case REFERENCE::ReferenceUnknown:
+        break;
+    }
+
+    return(*this);
+}
+
+SENTENCE const& SENTENCE::operator += ( FAA_MODE const faa_mode ) noexcept
+{
+    Sentence.push_back(',');
+
+    switch (faa_mode)
+    {
+
+    case FAA_MODE::Autonomous:
+
+        Sentence.push_back('A');
+        break;
+
+    case FAA_MODE::Differential:
+
+        Sentence.push_back('D');
+        break;
+
+    case FAA_MODE::Estimated:
+
+        Sentence.push_back('E');
+        break;
+
+    case FAA_MODE::NotValid:
+
+        Sentence.push_back('N');
+        break;
+
+    case FAA_MODE::Simulated:
+
+        Sentence.push_back('S');
+        break;
+
+    case FAA_MODE::Manual:
+
+        Sentence.push_back('M');
+        break;
+
+    case FAA_MODE::ModeUnknown:
         break;
     }
 

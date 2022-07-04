@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 void GGA::Empty( void ) noexcept
 {
@@ -21,10 +20,10 @@ bool GGA::Parse( SENTENCE const& sentence ) noexcept
    ** GGA - Global Positioning System Fix Data
    ** Time, Position and fix related data fora GPS receiver.
    **
-   **                                                      11
-   **        1         2       3 4        5 6 7  8   9  10 |  12 13  14   15
-   **        |         |       | |        | | |  |   |   | |   | |   |    |
-   ** $--GGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh<CR><LF>
+   **                                                        11
+   **        1         2        3 4         5 6 7  8   9  10 |  12 13  14   15
+   **        |         |        | |         | | |  |   |   | |   | |   |    |
+   ** $--GGA,hhmmss.ss,llll.lll,a,yyyyy.yyy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh<CR><LF>
    **
    ** Field Number: 
    **  1) Universal Time Coordinated (UTC)
@@ -118,7 +117,7 @@ bool GGA::Write( SENTENCE& sentence ) const noexcept
    RESPONSE::Write( sentence );
 
    sentence += UTCTime;
-   sentence += Position;
+   Position.Write(sentence);
    sentence += GPSQuality;
    sentence += NumberOfSatellitesInUse;
    sentence += HorizontalDilutionOfPrecision;

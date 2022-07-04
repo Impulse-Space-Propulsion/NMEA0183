@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 void GLL::Empty( void ) noexcept
 {
@@ -15,9 +14,9 @@ bool GLL::Parse( SENTENCE const& sentence ) noexcept
    ** GLL - Geographic Position - Latitude/Longitude
    ** Latitude, N/S, Longitude, E/W, UTC, Status
    **
-   **        1       2 3        4 5         6 7
-   **        |       | |        | |         | |
-   ** $--GLL,llll.ll,a,yyyyy.yy,a,hhmmss.ss,A*hh<CR><LF>
+   **        1        2 3         4 5         6 7
+   **        |        | |         | |         | |
+   ** $--GLL,llll.lll,a,yyyyy.yyy,a,hhmmss.ss,A*hh<CR><LF>
    **
    ** Field Number: 
    **  1) Latitude
@@ -67,7 +66,8 @@ bool GLL::Write( SENTENCE& sentence ) const noexcept
    
    RESPONSE::Write( sentence );
 
-   sentence += Position;
+   // sentence += Position;
+   Position.Write( sentence );
    sentence += UTCTime;
    sentence += IsDataValid;
 

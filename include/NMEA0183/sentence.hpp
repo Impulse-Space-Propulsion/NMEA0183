@@ -2,8 +2,6 @@
 
 #define SENTENCE_CLASS_HEADER
 
-class LATLONG;
-
 class SENTENCE
 {
    public:
@@ -50,13 +48,14 @@ class SENTENCE
       virtual SENTENCE const& operator += ( int const value ) noexcept;
       virtual SENTENCE const& operator += ( COMMUNICATIONS_MODE const mode ) noexcept;
       virtual SENTENCE const& operator += ( EASTWEST const easting ) noexcept;
-      virtual SENTENCE const& operator += ( LATLONG const& source ) noexcept;
+      // virtual SENTENCE const& operator += ( LATLONG const& source ) noexcept;
       virtual SENTENCE const& operator += ( NMEA0183_BOOLEAN const boolean ) noexcept;
       virtual SENTENCE const& operator += ( NORTHSOUTH const northing ) noexcept;
       virtual SENTENCE const& operator += ( time_t const time ) noexcept;
       virtual SENTENCE const& operator += ( TRANSDUCER_TYPE const transducer ) noexcept;
       virtual SENTENCE const& operator += ( LEFTRIGHT const left_or_right ) noexcept;
       virtual SENTENCE const& operator += ( REFERENCE const a_reference ) noexcept;
+      virtual SENTENCE const& operator += ( FAA_MODE const faa_mode ) noexcept;
 };
 
 #endif // SENTENCE_CLASS_HEADER

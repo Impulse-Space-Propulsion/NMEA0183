@@ -6,28 +6,28 @@
 ** General Purpose Classes
 */
 
-#include "sentence.hpp"
-#include "response.hpp"
-#include "latlong.hpp"
-#include "lorantd.hpp"
-#include "manufact.hpp"
-#include "mlist.hpp"
-#include "omegapar.hpp"
-#include "deccalop.hpp"
-#include "ratiopls.hpp"
-#include "radardat.hpp"
-#include "satdat.hpp"
-#include "freqmode.hpp"
+#include "NMEA0183/sentence.hpp"
+#include "NMEA0183/response.hpp"
+#include "NMEA0183/latlong.hpp"
+#include "NMEA0183/lorantd.hpp"
+#include "NMEA0183/manufact.hpp"
+#include "NMEA0183/mlist.hpp"
+#include "NMEA0183/omegapar.hpp"
+#include "NMEA0183/deccalop.hpp"
+#include "NMEA0183/ratiopls.hpp"
+#include "NMEA0183/radardat.hpp"
+#include "NMEA0183/satdat.hpp"
+#include "NMEA0183/freqmode.hpp"
 
 /*
 ** Response Classes
 */
 
-#include "gga.hpp"
-#include "gll.hpp"
-#include "rmc.hpp"
-#include "vtg.hpp"
-#include "p.hpp"
+#include "NMEA0183/gga.hpp"
+#include "NMEA0183/gll.hpp"
+#include "NMEA0183/rmc.hpp"
+#include "NMEA0183/vtg.hpp"
+#include "NMEA0183/p.hpp"
 
 class NMEA0183
 {
@@ -48,16 +48,7 @@ class NMEA0183
       NMEA0183();
 
       /*
-      HOW TO USE THIS CLASS
-      Normally, you don't care about most sentences.
-      Modify the declaration of this class (or copy this class to your own
-      class) and get rid of the sentences you don't care about. For example,
-      if you're interfacing with a device that will NEVER produce an AAM sentence,
-      get rid of the Aam member. Don't have code that will never be called.
-      */
-
-      /*
-      ** NMEA 0183 Sentences we understand
+      ** NMEA 0183 Sentences (more in full cloned dir as needed)
       */
 
       GGA Gga;

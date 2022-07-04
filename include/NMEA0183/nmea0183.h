@@ -22,8 +22,6 @@
 ** Turn off the warning about precompiled headers, it is rather annoying
 */
 
-#pragma warning( disable : 4699 )
-
 #if ! defined( CARRIAGE_RETURN )
 #define CARRIAGE_RETURN (0x0D)
 #endif
@@ -129,6 +127,6 @@ std::string Hex( uint32_t const value ) noexcept;
 std::string talker_id( std::string_view sentence ) noexcept;
 time_t ctime( int const year, int const month, int const day, int const hour, int const minute, int const second) noexcept;
 
-#include "nmea0183.hpp"
+#include "NMEA0183/nmea0183.hpp"
 
 #endif // NMEA0183_HEADER

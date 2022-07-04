@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 std::string talker_id( std::string_view sentence ) noexcept
 {

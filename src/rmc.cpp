@@ -1,5 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-#pragma hdrstop
 
 void RMC::Empty( void ) noexcept
 {
@@ -48,7 +47,7 @@ bool RMC::Parse( SENTENCE const& sentence ) noexcept
 
    // Version 2.3 of the standard has things different
 
-    FAAMode = sentence.FAAMode(12);
+   FAAMode = sentence.FAAMode(12);
 
    if (FAAMode != FAA_MODE::ModeUnknown)
    {
@@ -108,12 +107,14 @@ bool RMC::Write( SENTENCE& sentence ) const noexcept
 
    sentence += UTCTime;
    sentence += IsDataValid;
-   sentence += Position;
+   Position.Write( sentence );
+   // sentence += Position;
    sentence += SpeedOverGroundKnots;
    sentence += TrackMadeGoodDegreesTrue;
    sentence += Date;
    sentence += MagneticVariation;
    sentence += MagneticVariationDirection;
+   sentence += FAAMode;
 
    sentence.Finish();
 
@@ -131,6 +132,7 @@ RMC const& RMC::operator = ( RMC const& source ) noexcept
    Date                       = source.Date;
    MagneticVariation          = source.MagneticVariation;
    MagneticVariationDirection = source.MagneticVariationDirection;
+   FAAMode                    = source.FAAMode;
 
   return( *this );
 }
