@@ -59,7 +59,7 @@ void LONGITUDE::Write( SENTENCE& sentence ) const noexcept
 {
    char temp_string[ 80 ];
 
-   std::size_t number_of_characters = ::sprintf( temp_string, "%08.3f", Longitude );
+   std::size_t number_of_characters = ::sprintf( temp_string, "%08.4f", Longitude );
    sentence += std::string_view(temp_string, number_of_characters );
    
    if ( Easting == EASTWEST::East )
