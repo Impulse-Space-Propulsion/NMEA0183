@@ -1,9 +1,4 @@
-<<<<<<< HEAD:gll.cpp
-#include "nmea0183.h"
-#pragma hdrstop
-=======
 #include "NMEA0183/nmea0183.h"
->>>>>>> 7049222a73ef9d6ebd2e977807d27bcdd09a2403:src/gll.cpp
 
 void GLL::Empty( void ) noexcept
 {

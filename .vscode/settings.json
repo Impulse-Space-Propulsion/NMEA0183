@@ -49,12 +49,8 @@
     "streambuf": "cpp",
     "cinttypes": "cpp",
     "typeinfo": "cpp"
-<<<<<<< HEAD
-  }
-=======
   },
   "cSpell.words": [
     "NMEA"
   ]
->>>>>>> 7049222a73ef9d6ebd2e977807d27bcdd09a2403
 }

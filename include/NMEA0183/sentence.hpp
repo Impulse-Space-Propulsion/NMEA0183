@@ -2,11 +2,6 @@
 
 #define SENTENCE_CLASS_HEADER
 
-<<<<<<< HEAD:sentence.hpp
-class LATLONG;
-
-=======
->>>>>>> 7049222a73ef9d6ebd2e977807d27bcdd09a2403:include/NMEA0183/sentence.hpp
 class SENTENCE
 {
    public:

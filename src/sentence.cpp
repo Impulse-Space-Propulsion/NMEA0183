@@ -1,9 +1,4 @@
-<<<<<<< HEAD:sentence.cpp
-#include "nmea0183.h"
-#pragma hdrstop
-=======
 #include "NMEA0183/nmea0183.h"
->>>>>>> 7049222a73ef9d6ebd2e977807d27bcdd09a2403:src/sentence.cpp
 
 NMEA0183_BOOLEAN SENTENCE::Boolean( int field_number ) const noexcept
 {
