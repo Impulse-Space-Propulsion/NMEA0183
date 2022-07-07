@@ -12,7 +12,7 @@ class RESPONSE
 
    public:
 
-      inline RESPONSE(std::string_view id) noexcept : Mnemonic(id), DataSource(STRING_VIEW("--")) {}
+      inline RESPONSE(std::string_view id) noexcept : Mnemonic(id), DataSource(STRING_VIEW("GP")) {}
 
       std::string const Mnemonic;
 
