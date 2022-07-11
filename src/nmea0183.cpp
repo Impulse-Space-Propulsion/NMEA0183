@@ -1,8 +1,4 @@
 #include "NMEA0183/nmea0183.h"
-
-#if _WIN32
-  #define timegm _mkgmtime
-#endif
  
 static inline bool is_less_than(RESPONSE const * left, RESPONSE const * right) noexcept
 {
