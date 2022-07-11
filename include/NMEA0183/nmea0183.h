@@ -2,6 +2,8 @@
 
 #define NMEA_0183_HEADER
 
+#define timegm _mkgmtime
+
 /*
 ** Now include the math stuff for some calculations in the COORDINATE class
 */
