@@ -1,6 +1,6 @@
 #include "NMEA0183/nmea0183.h"
 
-#if defined (__WIN32__)
+#if defined(_WIN32)
   #define timegm _mkgmtime
 #endif
 
