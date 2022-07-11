@@ -4,7 +4,6 @@
   #define timegm _mkgmtime
 #endif
 
-
 static inline bool is_less_than(RESPONSE const * left, RESPONSE const * right) noexcept
 {
     return(left->Mnemonic < right->Mnemonic);
