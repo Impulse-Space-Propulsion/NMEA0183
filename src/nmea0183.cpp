@@ -1,5 +1,10 @@
 #include "NMEA0183/nmea0183.h"
 
+#if defined (__WIN32__)
+  #define timegm _mkgmtime
+#endif
+
+
 static inline bool is_less_than(RESPONSE const * left, RESPONSE const * right) noexcept
 {
     return(left->Mnemonic < right->Mnemonic);
