@@ -161,5 +161,5 @@ time_t ctime(int const year, int const month, int const day, int const hour, int
     gtime.tm_yday = 0;
     gtime.tm_isdst = 0;
 
-    return(_mkgmtime(&gtime));
+    return(timegm(&gtime));
 }
