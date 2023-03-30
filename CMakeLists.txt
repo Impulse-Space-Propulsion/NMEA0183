@@ -8,11 +8,7 @@ include(GNUInstallDirs)
 
 add_library(NMEA0183Lib STATIC)
 
-set_target_properties(NMEA0183Lib 
-  PROPERTIES 
-  WINDOWS_EXPORT_ALL_SYMBOLS TRUE
-  POSITION_INDEPENDENT_CODE TRUE
-  )
+set_target_properties(NMEA0183Lib PROPERTIES POSITION_INDEPENDENT_CODE TRUE)
 
 target_sources(NMEA0183Lib
   PRIVATE
